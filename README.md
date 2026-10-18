@@ -3,8 +3,8 @@
 A travel website showcasing destinations in Northern Pakistan, built with HTML, CSS and JavaScript.
 
 **Live demo:** https://bismanaveedahmed.github.io/my-travel-website/
-![Uploading image.png…]()
 
+![My Travel homepage](screenshot.png)
 
 ## Features
 
@@ -47,4 +47,4 @@ Then open `index.html` in your browser. No build step or dependencies required.
 
 **Bisma Naveed Ahmed**
 - GitHub: [@bismanaveedahmed](https://github.com/bismanaveedahmed)
-- LinkedIn: [bisma-naveed-ahmed](https://www.linkedin.com/in/bisma-naveed-ahmed-431742318)
+- LinkedIn: [bismanaveedahmed](https://www.linkedin.com/in/bismanaveedahmed)
