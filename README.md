@@ -4,7 +4,7 @@ A travel website showcasing destinations in Northern Pakistan, built with HTML, 
 
 **Live demo:** https://bismanaveedahmed.github.io/my-travel-website/
 
-![My Travel homepage](screenshot.png)
+<img width="1905" height="942" alt="image" src="https://github.com/user-attachments/assets/2e840e7d-95ed-481c-8bdc-a6f9f062ebad" />
 
 ## Features
 
