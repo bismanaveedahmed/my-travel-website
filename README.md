@@ -1,27 +1,50 @@
-# My Travel
+# My Travel 🍂
 
-A static travel site about Northern Pakistan: destinations, background on the region, travel tips, and a demo sign-up form.
+A travel website showcasing destinations in Northern Pakistan, built with HTML, CSS and JavaScript.
 
-Built with plain HTML and CSS, plus a small script for the mobile menu.
+**Live demo:** https://bismanaveedahmed.github.io/my-travel-website/
+![Uploading image.png…]()
 
-## Pages
 
-- `index.html`: home page
-- `about.html`: about the region
-- `destinations.html`: destination cards
-- `tips.html`: travel tips
-- `signup.html`: sign-up form (demo only, nothing is sent)
+## Features
 
-## Run locally
+- **Home** – full-screen hero section with an autumn theme
+- **About** – introduction to the site and its purpose
+- **Destinations** – featured places to visit in Northern Pakistan
+- **Travel Tips** – practical advice for planning a trip
+- **Sign Up** – user registration form
+- Sidebar navigation with icons for quick access to every section
 
-Open `index.html` in a browser, or serve the folder:
+## Built With
+
+- HTML5
+- CSS3
+- JavaScript
+
+## Run Locally
 
 ```bash
-python -m http.server
+git clone https://github.com/bismanaveedahmed/my-travel-website.git
+cd my-travel-website
 ```
 
-## Photo credits
+Then open `index.html` in your browser. No build step or dependencies required.
 
-<!-- TODO: replace any image whose license you can't confirm with a free one from Unsplash/Pexels, then credit it here. -->
-- Background: [Hunza Valley](https://unsplash.com/photos/aerial-photography-of-river-surrounded-by-mountains-8qCtP97jgoE) by [Mehtab Farooq](https://unsplash.com/@mehtabfarooq94) on Unsplash (Unsplash License)
-- Destination photos: source to be confirmed
+## What I Learned
+
+- Structuring a multi-section website with semantic HTML
+- Layouts with CSS Flexbox and background images with overlays
+- Building navigation menus and styling forms
+- Deploying a static site with GitHub Pages
+
+## Future Improvements
+
+- Improve the mobile layout with a collapsible menu
+- Add an image gallery for each destination
+- Connect the sign-up form to a backend
+
+## Author
+
+**Bisma Naveed Ahmed**
+- GitHub: [@bismanaveedahmed](https://github.com/bismanaveedahmed)
+- LinkedIn: [bisma-naveed-ahmed](https://www.linkedin.com/in/bisma-naveed-ahmed-431742318)
