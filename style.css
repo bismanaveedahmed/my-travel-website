@@ -1,0 +1,218 @@
+/* Shared styles for every page: top bar, hero, content panel, footer. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #1b2a33;
+}
+
+/* Background photo on a fixed layer, so it stays put while scrolling.
+   Done with a pseudo-element because iOS ignores background-attachment: fixed.
+   Photo: Hunza Valley by Mehtab Farooq on Unsplash (see README). */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)),
+        url("https://images.unsplash.com/photo-1514558427911-8e293bebf18c?auto=format&fit=crop&w=2400&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Smaller file for phones and tablets */
+@media (max-width: 1024px) {
+    body::before {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)),
+            url("https://images.unsplash.com/photo-1514558427911-8e293bebf18c?auto=format&fit=crop&w=1200&q=80");
+    }
+}
+
+main {
+    flex: 1;
+    padding-top: 64px; /* height of the fixed top bar */
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    background-color: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    border-bottom: 2px solid goldenrod;
+}
+
+.logo {
+    color: goldenrod;
+    font-size: 24px;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    display: block;
+    padding: 10px 16px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav a i {
+    margin-right: 6px;
+}
+
+.nav a:hover,
+.nav a.active {
+    background-color: rgb(182, 137, 23);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ---------- Hero / page title ---------- */
+.hero {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    letter-spacing: 4px;
+    margin: 0 0 16px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+}
+
+.hero blockquote {
+    max-width: 640px;
+    margin: 0 0 32px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 30px;
+    background-color: goldenrod;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgb(182, 137, 23);
+}
+
+.page-title {
+    text-align: center;
+    padding: 48px 16px 24px;
+}
+
+.page-title h1 {
+    font-size: 48px;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+}
+
+/* ---------- Content panel (About, Travel Tips) ---------- */
+.panel {
+    max-width: 960px;
+    margin: 0 auto 32px;
+    padding: 24px 32px;
+    border-radius: 10px;
+    background-color: rgba(130, 75, 3, 0.9);
+}
+
+.line {
+    border-bottom: 2px solid goldenrod;
+    padding-bottom: 6px;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    background-color: black;
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid goldenrod;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* ---------- Phone / small tablet ---------- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        padding: 8px;
+        background-color: rgba(0, 0, 0, 0.85);
+        border-bottom: 2px solid goldenrod;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero blockquote {
+        font-size: 17px;
+    }
+
+    .page-title h1 {
+        font-size: 32px;
+    }
+
+    .panel {
+        margin: 0 12px 24px;
+        padding: 16px 20px;
+    }
+}

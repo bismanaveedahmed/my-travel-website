@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .signup-container { background: rgba(255,255,255,0.95); color: #2f3e46; padding: 40px; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); max-width: 400px; margin: 48px auto; }
+        .signup-container h2 { margin-top: 0; text-align: center; }
+        .tagline { font-size: 14px; color: #555; text-align: center; }
+        .signup-container input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; }
+        .signup-container button { width: 100%; padding: 12px; margin-top: 8px; background: goldenrod; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; }
+        .signup-container button:hover { background: rgb(182, 137, 23); }
+        #thanks { text-align: center; color: green; }
+        @media (max-width: 768px) { .signup-container { margin: 24px 12px; padding: 24px; } }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a href="index.html" class="logo" aria-label="Home"><i class="fa-solid fa-mountain-sun"></i></a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        <ul class="nav">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-circle-info"></i>About</a></li>
+            <li><a href="destinations.html"><i class="fa-solid fa-location-dot"></i>Destinations</a></li>
+            <li><a href="tips.html"><i class="fa-solid fa-list-check"></i>Travel Tips</a></li>
+            <li><a href="signup.html" class="active"><i class="fa-solid fa-pencil-alt"></i>Sign Up</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="signup-container">
+            <h2>Join the Northern Adventure</h2>
+            <p class="tagline">Sign up to get exclusive travel tips &amp; valley guides!</p>
+            <form id="signup-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Create Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p id="thanks" hidden>Thanks for signing up! (Demo form &mdash; nothing is sent.)</p>
+        </div>
+        <script>
+            document.getElementById('signup-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+                this.hidden = true;
+                document.getElementById('thanks').hidden = false;
+            });
+        </script>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 MY TRAVEL. All Rights Reserved.</p>
+    </footer>
+    <script src="nav.js"></script>
+</body>
+</html>
